@@ -1,0 +1,20 @@
+3) (obrigatório) De acordo com a classe X descrita a seguir, responda à questão a. 
+public class X { 
+    private int cont; 
+
+    public void setCont(int cont) { 
+    this.cont = cont; 
+    } 
+} 
+a. A classe descrita a seguir está correta? Se incorreta justifique sua resposta. 
+public class Y { 
+    public static void main (String[ ] args) { 
+    X ob = new X(); 
+    ob.cont = 10; 
+    } 
+} 
+
+Resposra: A classe Y está incorreta, pois a variável cont foi declarada como private em X, o que seignifica que nao pode ser ascessada 
+diretamente fora da classe X.
+
+

@@ -1,0 +1,12 @@
+5) (obrigatório) O fragmento descrito a seguir está correto? Justifique a sua resposta. 
+public class X { 
+    public int metodo1(int a, int b){ 
+    ... 
+    } 
+    public String metodo1(int a, int b) { 
+    ... 
+    } 
+}
+
+Resposta: O fragmento está errado, pois od dois métodos tem o mesmo nome e a mesma lista de parametros, o que nao é permitido em java.
+Quando dois métodos tem o mesmo nome, as listas de parametros devem ser diferente uma da outra.

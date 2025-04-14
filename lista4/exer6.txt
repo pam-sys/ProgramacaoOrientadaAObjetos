@@ -1,0 +1,5 @@
+6) (obrigatório) Se todos os objetos de uma classe tiverem que compartilhar a mesma 
+variável, como você deve declarar essa variável? 
+
+Resposta: Declara-se como static, assim, bjetos podem acessá-los como se fosse um membro de
+objeto, só que compartilhado.
