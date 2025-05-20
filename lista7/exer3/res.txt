@@ -1,0 +1,8 @@
+Saída do código:
+Computador()
+Notebook()
+Código: 12345
+
+Quando o construtor de uma subclasse é executado, o construtor da superclasse é invocado primeiro. 
+Se a superclasse possuir um construtor padrão (ou seja, sem parâmetros), ele será chamado automaticamente,
+mesmo que a palavra-chave super() não seja usada explicitamente, desde que o construtor da subclasse também não tenha parâmetros.

@@ -1,0 +1,8 @@
+Resultados impressos: x: 8
+x: 12
+
+O objeto da superclasse é iniciado com o valor 8; O valor do objeto da subclasse é 
+iniciado com o valor 4 e muda para o valor 12. O atributo i está 
+declarado como private mantendo o acesso ao atributo restrito a própria classe. O
+modificador protected também é usado para manter o acesso restrido, mas, também é 
+acessado pela sua subclasse.

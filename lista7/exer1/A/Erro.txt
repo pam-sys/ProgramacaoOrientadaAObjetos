@@ -1,0 +1,1 @@
+A) O atributo estilo está sendo declarado como private na subclasse triangulo, portanto não é possivel acessar diretamente por outra classe.

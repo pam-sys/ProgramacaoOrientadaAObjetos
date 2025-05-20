@@ -1,0 +1,1 @@
+C) Como os atributos altura e largura foram declarados como privete, não podem ser acessados diretamente por outras classes.
