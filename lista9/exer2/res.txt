@@ -1,0 +1,2 @@
+2) O construtor recebe os parametros necessarios, e o primeiro comando do construtor deve ser a chamada do construtor da superclasse Super(),
+em seguida fasce os comandos da propria subclasse.

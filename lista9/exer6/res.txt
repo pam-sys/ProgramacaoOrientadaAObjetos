@@ -1,0 +1,15 @@
+6) A saida é:
+Construcao de A.
+Construcao de B.
+Construcao de C.
+
+O construtor de C é chamado, antes disso, chama o construtor de B.
+
+O construtor de B é chamado, antes disso, chama o construtor de A.
+
+O construtor de A é chamado e imprime: "Construção de A."
+
+Depois volta para o construtor de B, que imprime: "Construção de B."
+
+Depois volta para o construtor de C, que imprime: "Construção de C."
+
