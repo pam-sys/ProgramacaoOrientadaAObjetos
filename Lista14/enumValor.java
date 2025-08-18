@@ -1,0 +1,3 @@
+enum enumValor {
+     AS, DOIS, TRES, QUATRO, CINCO, SEIS, SETE, OITO, NOVE, DEZ, VALETE, DAMA, REI;
+}
