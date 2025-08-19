@@ -1,0 +1,39 @@
+1. Qual é a classe Java que fica no topo da hierarquia de exceções?
+
+    R. Throwable
+
+2. O código cujas execuções estão sendo monitoradas  deve fazer parte de qual instrução no 
+tratamento de exceções em Java?
+
+    R. try {}
+
+3. O que catch faz? Após um catch ser executado, o que acontece com o fluxo de execução? 
+
+    R. O catch captura e trata a exceção que foi lançada dentro do bloco try. Ele só é executado se 
+    uma exceção do tipo especificado (ou de uma subclasse) for lançada. Depois que o código dentro do
+    catch é executado, o fluxo continua normalmente logo após o bloco de tratamento (ou passa pelo finally, se existir).
+
+4. O que acontece quando uma exceção não é capturada?
+
+    R.Se uma exceção é lançada e não existe um bloco catch compatível para tratá-la, o Java vai procurar um catch no 
+    método que chamou o atual, depois no próximo, e assim por diante. Se nenhum método da pilha capturar a exceção, 
+    ela chega até a JVM que enserra o programa e exibe uma mensagem de erro.
+
+5. Quando ocorre uma exceção, o que o programa deve fazer?
+
+    R. Tratar a exceção adequadamente (quando for possível recuperar). Propagar a exceção (quando não faz sentido tratar ali, 
+    mas sim em outro nível).
+
+6. Explique resumidamente como try, catch e finnaly são utilizados.
+
+    R. try: Bloco onde colocamos o código que pode gerar exceções.
+
+    catch: Bloco que captura e trata a exceção, se ela acontecer no try.
+
+    finally: Bloco opcional que sempre é executado, independente de ter ocorrido exceção ou não (usado para liberar recursos,
+    fechar arquivos, conexões, etc.).
+
+7. O que está errado neste fragmento de código? 
+
+    R. O vetor tem 5 elementos, porém o for percorre 6 elementos, o que gera um erro, esse for deveria estar dentro de um try, 
+    antes do catch, o catch não pode existir sem o try.
