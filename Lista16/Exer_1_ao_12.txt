@@ -1,0 +1,97 @@
+1) Um bloco try/catch pode ser usado para tratar dois ou mais tipos de exceções diferentes?
+
+    R. Sim
+
+2) A cláusula catch de uma exceção da superclasse também captura subclasses dessa superclasse?
+
+    R. Sim se você usar um catch com uma exceção da superclasse, ele também captura todas as subclasses dessa exceção.
+
+3) Em blocos try aninhados, o que acontece a uma exceção que não é capturada pelo bloco 
+interno? 
+
+    R. Se uma exceção ocorre no bloco try interno e não for capturada pelos catch correspondentes a ele,
+    ela “sobe” para o bloco try externo.
+    O bloco try externo, então, tenta capturar essa exceção com os seus próprios catch.
+    Se nenhum catch externo também conseguir tratar, a exceção continua subindo na pilha de chamadas até que seja tratada 
+    (ou o programa termine com erro).
+
+4) Um catch interno pode relançar uma exceção para um catch externo? 
+
+    R. Sim, A exceção ocorre no bloco interno.
+    O catch interno a captura, faz algo (como logar, exibir mensagem, liberar recursos, etc.).
+    O catch interno relança a exceção.
+    O bloco externo a captura novamente.
+
+5) O que o throw faz? 
+
+    R. Quando você escreve throw, está dizendo ao Java para interromper a execução normal do programa e lançar uma
+    exceção que deverá ser tratada por um bloco catch compatível.
+    A exceção lançada sobe na pilha de chamadas até encontrar um catch apropriado.
+    Se nenhum catch for encontrado, o programa será encerrado com erro.
+
+6) Throw lança objetos? Quais objetos?
+
+    R. Sim, o throw lança objetos em Java, Mas apenas objetos da classe Throwable ou suas subclasses.
+
+7) Uma exceção pode ser lançada após ser capturada? 
+
+    R. Sim, uma exceção pode ser lançada após ser capturada.
+    Isso é chamado de relançamento de exceção.
+
+8) De acordo com o código descrito a seguir, quais linhas serão executadas se ocorrer uma exceção 
+no método a() e no método b()? Por que isso ocorre? 
+1   try { 
+2       a(); 
+3   } 
+4   catch (Exception e) { 
+5       trataErro(e); 
+6   } 
+7   try { 
+8       b(); 
+9   } 
+10  catch (Exception e) {  
+11      trataErro(e);
+12  }
+
+    R. Se a exceção ocorre em a(), são executadas as linhas 1, 2, 4, 5, 6, 7, 8...
+    Se a exceção ocorre em b(), são executadas as linhas 7, 8, 10, 11, 12.
+    Isso acontece porque a exceção interrompe o bloco try no ponto onde ocorreu e desvia imediatamente para o catch correspondente.
+
+9) De acordo com o código descrito a seguir, se ocorrer uma exceção na execução do método a() 
+quais linhas serão executadas: 
+1   try { 
+2       a(); 
+3       b(); 
+4   } 
+5   catch (Exception e) { 
+6       trataErro(e); 
+7   } 
+
+    R.  A linha 2 (a();) tentará executar o método a(). Se ocorrer uma exceção, a execução do método a() 
+    será interrompida e a exceção será propagada para o bloco try.
+    A linha 3 (b();) não será executada porque a exceção interrompeu o fluxo normal do código.
+    A exceção será capturada pelo bloco catch (linha 5) e a linha 6 (trataErro(e);) será executada para tratar o erro.
+
+    Portanto, as linhas executadas serão:
+
+    - Linha 2 (a();) até o ponto onde ocorre a exceção
+    - Linha 6 (trataErro(e);) para tratar a exceção
+
+10) O bloco finally é a última parte do código executada antes de o programa terminar. Isso é 
+verdadeiro ou falso? Explique sua resposta.
+
+    R.Falso. O bloco finally é a última parte do bloco try/catch/finally a ser executada.
+    Sempre é executado, independentemente de ter ocorrido ou não exceção
+    (exceto se o programa for encerrado à força com System.exit() ou travar por um erro grave).
+    mas isso não significa que ele será a última parte executada antes do programa terminar.
+    Após o finally, o programa pode continuar normalmente, executando outras instruções.
+
+11) Quais são as duas subclasses diretas de Throwable? 
+
+    R. Exception e Error.
+
+12)
+
+    R.Não. O código não deve lançar exceções do tipo Error, pois elas representam falhas graves da JVM ou do ambiente de execução 
+    (como falta de memória), sendo problemas que não podem ser recuperados pela aplicação e que são responsabilidade da própria máquina virtual.
+
